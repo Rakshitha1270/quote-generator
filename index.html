@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator with History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="container">
+        <section class="hero">
+            <p class="tag">✨ Quote Generator</p>
+            <h1>Find a quote. Save your favorites.</h1>
+            <p class="subtitle">Fetch random quotes from a public API and keep your favorite quote history.</p>
+
+            <div class="quote-card">
+                <div id="quote">Click “New Quote” to get started.</div>
+                <div id="author"></div>
+            </div>
+
+            <div class="buttons">
+                <button id="newQuoteBtn">🔄 New Quote</button>
+                <button id="favoriteBtn" class="favorite">❤️ Favorite</button>
+                <button id="copyBtn">📋 Copy</button>
+            </div>
+            <p id="message"></p>
+        </section>
+
+        <section class="history">
+            <div class="history-title">
+                <h2>❤️ Favorite History</h2>
+                <button id="refreshBtn">Refresh</button>
+            </div>
+            <div id="historyList" class="history-list">
+                <p class="empty">No favorite quotes yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
